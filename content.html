@@ -279,13 +279,7 @@
     function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
-    }
-
-    var currentUrl = window.location.pathname;
-    var navbar = document.getElementsByTagName('object')[0].contentWindow;
-    window.addEventListener('load', function() {
-      navbar.postMessage({ type: "updateActiveLink", url: currentUrl }, "*");
-    });
-    
+    } 
   </script>
+  <script type="text/javascript" src="./packages/js/main.js"></script>
 </html>
