@@ -1,122 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Payment</title>
-    <link rel="icon" href="./packages/images/Titleicon.png">
+    <link rel="icon" href="./packages/images/Titleicon.png" />
     <link rel="stylesheet" href="./packages/css/main.css" />
     <link rel="stylesheet" href="./packages/css/payment.css" />
-</head>
-<body>
+  </head>
+  <body>
     <!--==================== NAVIGATION ====================-->
     <div style="position: fixed; width: 100%; z-index: 1">
-        <object
-          type="text/html"
-          data="navbar.html"
-          width="100%"
-          height="300"
-        ></object>
-      </div>
-      <!-- The above line imports navigation bar from navbar.html -->
-    <video autoplay muted loop id="myVideo">
-        <source src="./packages/images/paymentback.mp4" type="video/mp4">
-    </video>
-    <header>
+      <object
+        type="text/html"
+        data="navbar.html"
+        width="100%"
+        height="300"
+      ></object>
+    </div>
+    <!-- The above line imports navigation bar from navbar.html -->
+    <main class="main">
+      <video autoplay muted loop id="myVideo">
+        <source src="./packages/images/paymentback.mp4" type="video/mp4" />
+      </video>
+      <header>
         <div class="payhead">
-            <img class="logopay" src="./packages/images/VID.png" alt="Logo">
-            <h2>PAYMENT DETAILS</h2>
+          <img class="logopay" src="./packages/images/VID.png" alt="Logo" />
+          <h2>PAYMENT DETAILS</h2>
         </div>
-    </header>
-    <form action="/action_page.php" method="get">
-        <div class="formpay">
+      </header>
+      <div class="form">
+        <form action="/action_page.php" method="get">
+          <div class="formpay">
             <label for="firstname">First Name:</label>
-            <input type="text" id="firstname" name="firstname" required>
-        </div>
-        <div class="formpay">
+            <input type="text" id="firstname" name="firstname" required />
+          </div>
+          <div class="formpay">
             <label for="lastname">Last Name:</label>
-            <input type="text" id="lastname" name="lastname" required>
-        </div>
-        <div class="formpay">
+            <input type="text" id="lastname" name="lastname" required />
+          </div>
+          <div class="formpay">
             <label for="nic">NIC:</label>
-            <input type="text" id="nic" name="nic" required>
-        </div>
-        <div class="formpay">
+            <input type="text" id="nic" name="nic" required />
+          </div>
+          <div class="formpay">
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="formpay">
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="formpay">
             <label for="number">Phone Number:</label>
-            <input type="tel" id="number" name="number" maxlength="10" required>
-        </div>
-        <div class="formpay">
+            <input
+              type="tel"
+              id="number"
+              name="number"
+              maxlength="10"
+              required
+            />
+          </div>
+          <div class="formpay">
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
-        </div>
-        <div class="formpay">
+            <input type="text" id="address" name="address" required />
+          </div>
+          <div class="formpay">
             <label for="code">Zip Code:</label>
-            <input type="number" id="code" name="code" required>
-        </div>
-        <div class="formpay">
-            <label for="cardno">Card Number:<img id="cardpayment" src="./packages/images/cardpayment.webp" alt="visa"></label>
-            <input type="number" id="cardno" name="cardno" required>
-        </div>
-        <div class="formpay">
+            <input type="number" id="code" name="code" required />
+          </div>
+          <div class="formpay">
+            <label for="cardno"
+              >Card Number:<img
+                id="cardpayment"
+                src="./packages/images/cardpayment.webp"
+                alt="visa"
+            /></label>
+            <input type="number" id="cardno" name="cardno" required />
+          </div>
+          <div class="formpay">
             <label for="expiry">Expiry:</label>
-            <input type="month" id="expiry" name="expiry" required>
-        </div>
-        <div class="formpay">
+            <input type="month" id="expiry" name="expiry" required />
+          </div>
+          <div class="formpay">
             <label for="cvv">CVV:</label>
-            <input type="number" id="cvv" name="cvv" required>
-        </div>
-        <h2 id="totalpay">Your total is: <span id="total"></span></h2>
-        <div class="buttons-signup">
-            <button class="button" onclick="window.location.href='shop.html'"><div class="paycon"></div>BACK</button>
-            <button class="button" onclick="submitpay()"><div class="paycon"></div>PAY NOW</button>
-            <button class="button" onclick= "reset()"><div class="paycon"></div>RESET</button>
-        </div>
-    </form>  
-    <script>
-        var params = new URLSearchParams(window.location.search);
-        var total = params.get('total');
-        document.getElementById('total').textContent = total;
-        console.log(total)
+            <input type="number" id="cvv" name="cvv" required />
+          </div>
+          <h2 id="totalpay">Your total is: <span id="total"></span></h2>
+          <div class="buttons-signup">
+            <button class="button" onclick="window.location.href='shop.html'">
+              <div class="paycon"></div>
+              BACK
+            </button>
+            <button class="button" onclick="submitpay()">
+              <div class="paycon"></div>
+              PAY NOW
+            </button>
+            <button class="button" onclick="reset()">
+              <div class="paycon"></div>
+              RESET
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var total = params.get("total");
+    document.getElementById("total").textContent = total;
+    console.log(total);
 
-        function reset(){
-            document.getElementById("firstname").reset;
-            document.getElementById("lastname").reset;
-            document.getElementById("nic").reset;
-            document.getElementById("email").reset;
-            document.getElementById("number").reset;
-            document.getElementById("address").reset;
-            document.getElementById("code").reset;
-            document.getElementById("cardno").reset;
-            document.getElementById("expiry").reset;
-            document.getElementById("cvv").reset;
-        }
+    function reset() {
+      document.getElementById("firstname").reset;
+      document.getElementById("lastname").reset;
+      document.getElementById("nic").reset;
+      document.getElementById("email").reset;
+      document.getElementById("number").reset;
+      document.getElementById("address").reset;
+      document.getElementById("code").reset;
+      document.getElementById("cardno").reset;
+      document.getElementById("expiry").reset;
+      document.getElementById("cvv").reset;
+    }
 
-        function submitpay() {
-            // get all form inputs
-            var firstname = document.getElementById("firstname").value;
-            var lastname = document.getElementById("lastname").value;
-            var nic = document.getElementById("nic").value;
-            var email = document.getElementById("email").value;
-            var number = document.getElementById("number").value;
-            var address = document.getElementById("address").value;
-            var code = document.getElementById("code").value;
-            var cardno = document.getElementById("cardno").value;
-            var expiry = document.getElementById("expiry").value;
-            var cvv = document.getElementById("cvv").value;
-            
-            // check if all required inputs are filled
-            if (firstname === "" || lastname === "" || nic === "" || email === "" || number === "" || address === "" || code === "" || cardno === "" || expiry === "" || cvv === "") {
-                alert("Please fill out all the required fields!");
-            } else {
-                setTimeout(function() {
-                window.location.href = 'Shop.html';
-                alert("Thank you for shopping with us!");
-                });
-            }
-        }
-    </script>    
-</body>
+    function submitpay() {
+      // get all form inputs
+      var firstname = document.getElementById("firstname").value;
+      var lastname = document.getElementById("lastname").value;
+      var nic = document.getElementById("nic").value;
+      var email = document.getElementById("email").value;
+      var number = document.getElementById("number").value;
+      var address = document.getElementById("address").value;
+      var code = document.getElementById("code").value;
+      var cardno = document.getElementById("cardno").value;
+      var expiry = document.getElementById("expiry").value;
+      var cvv = document.getElementById("cvv").value;
+
+      // check if all required inputs are filled
+      if (
+        firstname === "" ||
+        lastname === "" ||
+        nic === "" ||
+        email === "" ||
+        number === "" ||
+        address === "" ||
+        code === "" ||
+        cardno === "" ||
+        expiry === "" ||
+        cvv === ""
+      ) {
+        alert("Please fill out all the required fields!");
+      } else {
+        setTimeout(function () {
+          window.location.href = "Shop.html";
+          alert("Thank you for shopping with us!");
+        });
+      }
+    }
+  </script>
 </html>
