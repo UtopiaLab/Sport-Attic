@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Editor</title>
+    <link rel="icon" href="packages/images/ICON_b.png" />
+    <link rel="stylesheet" href="packages/css/editor_s3.css" />
+  </head>
+  <body>
+    <!--==================== NAVIGATION ====================-->
+    <div style="position: fixed; width: 100%; z-index: 1">
+      <object
+        type="text/html"
+        data="navbar.html"
+        width="100%"
+        height="300"
+      ></object>
+    </div>
+    <!-- The above line imports navigation bar from navbar.html -->
+    <main class="main">
+      <div class="editor">
+        <div class="title">Page Editor</div>
+        <hr />
+        <div class="user">
+          Name : Ranul Madushanka <br />
+          Role: Student 3 <br />
+          The following pages were edited by me.
+        </div>
+        <hr />
+        <div class="content">
+          <a href="about.html">About Us Page</a> <br /><br />
+          Used HTML, CSS, Javascriptto build the page related to styles and
+          functions <br />
+          When hovering description of the Image will be displayed below the
+          image by using some javascript mouse events.
+
+          <br /><br />
+
+          <a href="qna.html">Quiz Page</a> <br /><br />
+          Used HTML, CSS, Javascript to build the page related to styles and
+          functions <br />
+          When hovering description of the Image will be displayed below the
+          image by using some javascript mouse events.
+
+          <br /><br />
+
+          <a href="content.html">Content Page</a> <br /><br />
+          Used HTML, CSS, Javascript to build the page related to styles and
+          functions <br />
+          When hovering description of the Image will be displayed below the
+          image by using some javascript mouse events.
+
+          <br /><br />
+
+          <a href="#">Main Page</a> <br /><br />
+          Used HTML, CSS, Javascript to build the page related to styles and
+          functions <br />
+          When hovering description of the Image will be displayed below the
+          image by using some javascript mouse events.
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript">
+    var currentUrl = window.location.pathname;
+    var navbar = document.getElementsByTagName('object')[0].contentWindow;
+    window.addEventListener('load', function() {
+      navbar.postMessage({ type: "updateActiveLink", url: currentUrl }, "*");
+    });
+  </script>
+</html>

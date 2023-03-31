@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Us</title>
+    <link rel="icon" href="packages/images/ICON_b.png" />
+    <link rel="stylesheet" href="packages/css/about.css" />
+    <link rel="stylesheet" href="packages/css/styles.css" />
+  </head>
+  <body>
+
+    <!--==================== NAVIGATION ====================-->
+    <div style="position: fixed; width: 100%; z-index: 1;">
+      <object
+        type="text/html"
+        data="navbar.html"
+        width="100%"
+        height="300"
+      ></object>
+    </div>
+    <!-- The above line imports navigation bar from navbar.html -->
+
+    <main class="main">
+      <div class="title">Meet the Team</div>
+      <br />
+      <div class="gallery-wrapper">
+        <div class="column">
+          <div class="gallery">
+            <img
+              id="user1"
+              src="packages/images/user1.png"
+              alt="User1"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user1d')"
+              onmouseout="showDetailsNone('user1d')"
+            />
+            <div id="user1d" class="desc1">
+              Student 1 : <br />
+              ID: 0689057
+            </div>
+          </div>
+
+          <div class="gallery">
+            <img
+              src="packages/images/user1.png"
+              alt="User2"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user2d')"
+              onmouseout="showDetailsNone('user2d')"
+            />
+            <div id="user2d" class="desc2">
+              Student 2 : <br />
+              ID: 0678567
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="gallery">
+            <img
+              src="packages/images/user1.png"
+              alt="user3"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user3d')"
+              onmouseout="showDetailsNone('user3d')"
+            />
+            <div id="user3d" class="desc3">
+              Student 3 : <br />
+              ID: 0685678
+            </div>
+          </div>
+
+          <div class="gallery">
+            <img
+              src="packages/images/user1.png"
+              alt="user4"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user4d')"
+              onmouseout="showDetailsNone('user4d')"
+            />
+            <div id="user4d" class="desc4">
+              Student 4 : <br />
+              ID: 0667894
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="editor"><a href="editor.html">Editor</a></div>
+    </main>
+
+    <script>
+      function showDetails(x) {
+        var divid = document.getElementById(x);
+        divid.style.display = "block";
+      }
+
+      function showDetailsNone(x) {
+        var divid = document.getElementById(x);
+        divid.style.display = "none";
+      }
+    </script>
+  </body>
+  <script type="text/javascript">
+    var currentUrl = window.location.pathname;
+    var navbar = document.getElementsByTagName('object')[0].contentWindow;
+    window.addEventListener('load', function() {
+      navbar.postMessage({ type: "updateActiveLink", url: currentUrl }, "*");
+    });
+  </script>
+</html>

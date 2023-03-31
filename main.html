@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SportATTIC</title>
+    <link rel="icon" href="../Images/Titleicon.png" />
+    <link rel="stylesheet" href="./packages/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="home">
+    <!--==================== NAVIGATION ====================-->
+    <div style="position: fixed; width: 100%; z-index: 1">
+      <object
+        type="text/html"
+        data="navbar.html"
+        width="100%"
+        height="300"
+        crossorigin="anonymous"
+      ></object>
+    </div>
+    <!-- The above line imports navigation bar from navbar.html -->
+    <video autoplay muted loop id="myVideo">
+      <source src="../background_vid.mp4" type="video/mp4" />
+    </video>
+    <div class="grid-container">
+      <div class="badminton" id="badminton">
+        <img src="./packages/images/main_bad.jpg" alt="Badminton" />
+        <a href="cricket.html"> </a>
+      </div>
+      <div class="football" id="football">
+        <img src="./packages/images/main_football.jpg" alt="Football" />
+        <a href="cricket.html"> </a>
+      </div>
+      <div class="cricket" id="cricket">
+        <img src="./packages/images/main_cricket.jpg" alt="cricket" />
+        <a href="cricket.html"> </a>
+      </div>
+      <div class="tennis" id="tennis">
+        <img src="./packages/images/main_tennis.jpg" alt="Tennis" />
+        <a href="cricket.html"></a>
+      </div>
+    </div>
+  </body>
+</html>
