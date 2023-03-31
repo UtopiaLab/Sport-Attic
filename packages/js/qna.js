@@ -1,5 +1,5 @@
-let startArea = document.getElementsByClassName("start-section--wrapper");
-let statArea = document.getElementsByClassName("stat-section__wrapper");
+let startArea = document.getElementsByClassName("start-section-wrapper");
+let statArea = document.getElementsByClassName("stat-section-wrapper");
 let qnaArea = document.getElementsByClassName("qna-section__wrapper");
 let resArea = document.getElementsByClassName("result-section__wrapper");
 let startBtn = document.getElementById("startBtn");

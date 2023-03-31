@@ -23,15 +23,19 @@ body {
 
 .start-section {
     text-align: center;
-    width: 60%;
     border: 2px solid green;
     border-radius: 20px;
-    padding: 2%;
 }
 
-.start-section--wrapper {
+.start-section-wrapper {
     display: flex;
     justify-content: center;
+}
+
+.stat-section-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
 }
 
 .instruction-section {
@@ -41,10 +45,10 @@ body {
 }
 
 .qna-section {
-    width: 60%;
     border: 2px solid green;
     border-radius: 20px;
-    padding: 2%;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .qna-section__wrapper {
@@ -74,7 +78,6 @@ body {
 }
 
 .result-section {
-    width: 60%;
     text-align: center;
     border: 2px solid green;
     border-radius: 20px;
@@ -91,18 +94,16 @@ body {
 }
 
 .stat-section {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
-    width: 60%;
     border: 2px solid green;
     border-radius: 20px;
     padding: 2%;
+    min-width: 400px;
 }
 
-.stat-section__wrapper {
-    display: flex;
-    justify-content: center;
-    margin: 2%;
+.stat-section > div {
+    padding: 0 20px 0 20px;
 }
 
 .grid-container {
