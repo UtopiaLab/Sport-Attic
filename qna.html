@@ -23,96 +23,95 @@
       ></object>
     </div>
     <!-- The above line imports navigation bar from navbar.html -->
-
-    <!--main heading-->
-    <div class="main">
-      <div class="main-section">
-        <h2>Quiz App</h2>
-      </div>
-
-      <!--starting section-->
-      <div class="start-section-wrapper">
-        <div class="start-section">
-          <div class="instruction-section">
-            <h3>Instructions</h3>
-            <ul>
-              <li>Select the correct answer from the given four answers</li>
-              <li>Only one chance will be given per question</li>
-              <li>Need to answer all questions within one minute</li>
-            </ul>
-          </div>
-          <button id="startBtn" class="btn button1">Start Quiz</button>
+      <!--main heading-->
+      <div class="main">
+        <div class="main-section">
+          <h2>Quiz App</h2>
         </div>
-      </div>
 
-      <!--stats section-->
-      <div class="stat-section-wrapper">
-        <div class="stat-section">
-          <div class="row-container">
-            <h3>
-              Questions - <span id="currentQuestionNum"></span> /
-              <span id="totalQuestions"></span>
-            </h3>
-          </div>
-          <div class="row-container">
-            <h3>Time Limit - <span id="timeLeft"></span>s</h3>
+        <!--starting section-->
+        <div class="start-section-wrapper">
+          <div class="start-section">
+            <div class="instruction-section">
+              <h3>Instructions</h3>
+              <ul>
+                <li>Select the correct answer from the given four answers</li>
+                <li>Only one chance will be given per question</li>
+                <li>Need to answer all questions within one minute</li>
+              </ul>
+            </div>
+            <button id="startBtn" class="btn button1">Start Quiz</button>
           </div>
         </div>
-      </div>
 
-      <!--qna section-->
-      <div class="qna-section__wrapper">
-        <div class="qna-section">
-          <div class="question-area">
-            <h3 id="currentQuestion"></h3>
-          </div>
-
-          <div class="answers-area">
+        <!--stats section-->
+        <div class="stat-section-wrapper">
+          <div class="stat-section">
             <div class="row-container">
-              <button id="answer1" class="btn button2"></button>
-              <button id="answer2" class="btn button2"></button>
+              <h3>
+                Questions - <span id="currentQuestionNum"></span> /
+                <span id="totalQuestions"></span>
+              </h3>
             </div>
             <div class="row-container">
-              <button id="answer3" class="btn button2"></button>
-              <button id="answer4" class="btn button2"></button>
-            </div>
-          </div>
-
-          <div class="control-area">
-            <div class="row-container">
-              <button id="nextQBtn" class="btn button1">Next Question</button>
-            </div>
-          </div>
-
-          <div class="immediate-res-area">
-            <div class="row-container">
-              <h4 id="imResult"></h4>
+              <h3>Time Limit - <span id="timeLeft"></span>s</h3>
             </div>
           </div>
         </div>
-      </div>
 
-      <!--results section-->
-      <div class="result-section__wrapper">
-        <div class="result-section">
-          <h3>Congratulations Quiz Completed!</h3>
-          <div class="results-wrapper">
-            <p>Questions <span id="questionCount"></span></p>
-            <br />
-            <p>Wrong Answers <span id="wrongNum"></span></p>
-            <br />
-            <p>Score <span id="correctNum"></span></p>
-            <br />
-            <p>Time Taken <span id="timeElapsed"></span>s</p>
-            <br />
-            <p id="feedback"></p>
+        <!--qna section-->
+        <div class="qna-section__wrapper">
+          <div class="qna-section">
+            <div class="question-area">
+              <h3 id="currentQuestion"></h3>
+            </div>
+
+            <div class="answers-area">
+              <div class="row-container">
+                <button id="answer1" class="btn button2"></button>
+                <button id="answer2" class="btn button2"></button>
+              </div>
+              <div class="row-container">
+                <button id="answer3" class="btn button2"></button>
+                <button id="answer4" class="btn button2"></button>
+              </div>
+            </div>
+
+            <div class="control-area">
+              <div class="row-container">
+                <button id="nextQBtn" class="btn button1">Next Question</button>
+              </div>
+            </div>
+
+            <div class="immediate-res-area">
+              <div class="row-container">
+                <h4 id="imResult"></h4>
+              </div>
+            </div>
           </div>
-          <button id="closeBtn" class="btn button1">Close</button>
+        </div>
+
+        <!--results section-->
+        <div class="result-section__wrapper">
+          <div class="result-section">
+            <h3>Congratulations Quiz Completed!</h3>
+            <div class="results-wrapper">
+              <p>Questions <span id="questionCount"></span></p>
+              <br />
+              <p>Wrong Answers <span id="wrongNum"></span></p>
+              <br />
+              <p>Score <span id="correctNum"></span></p>
+              <br />
+              <p>Time Taken <span id="timeElapsed"></span>s</p>
+              <br />
+              <p id="feedback"></p>
+            </div>
+            <button id="closeBtn" class="btn button1">Close</button>
+          </div>
         </div>
       </div>
-    </div>
-     <!--==================== FOOTER ====================-->
-     <div style="width: 100%; z-index: 1; position: fixed; bottom: 0">
+    <!--==================== FOOTER ====================-->
+    <div style="width: 100%; z-index: 1; position: fixed; bottom: 0">
       <object
         type="text/html"
         data="footer.html"
@@ -123,6 +122,6 @@
     <!-- The above line imports footer from footer.html -->
   </body>
   <script src="packages/js/qna.js"></script>
-    <script src="/data/questions.js" type="module"></script>
-    <script type="text/javascript" src="./packages/js/main.js"></script>
+  <script src="/data/questions.js" type="module"></script>
+  <script type="text/javascript" src="./packages/js/main.js"></script>
 </html>
